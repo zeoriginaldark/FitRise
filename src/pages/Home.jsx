@@ -4,9 +4,9 @@ export default function Home({ onNavigate }) {
   const pillars = [
     {
       title: "Strength Training",
-      description: "Build raw strength, increase muscle mass, and improve bone density with our premium weightlifting facilities and coaching.",
+      description: "Build raw strength, increase muscle mass, and improve bone density with custom weightlifting programs tailored to your profile.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-green">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-primary">
           <path d="M6.5 6.5h11" />
           <path d="M6.5 17.5h11" />
           <path d="m3 10 3-3 3 3" />
@@ -21,7 +21,7 @@ export default function Home({ onNavigate }) {
       title: "Cardio & HIIT",
       description: "Boost your metabolic rate, melt fat, and improve cardiovascular performance with our guided high-intensity interval classes.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-secondary">
           <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
         </svg>
       )
@@ -30,7 +30,7 @@ export default function Home({ onNavigate }) {
       title: "Nutrition Coaching",
       description: "Fuel your body for performance. Get customizable meal plans and one-on-one nutrition advice tailored to your personal goals.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-green">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-primary">
           <path d="M12 2v20" />
           <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
         </svg>
@@ -40,7 +40,7 @@ export default function Home({ onNavigate }) {
       title: "Group Fitness",
       description: "Connect and elevate together. Join our high-energy classes including Yoga, Pilates, Spinning, Zumba, and Box-Fit.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-orange">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="highlight-secondary">
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -48,13 +48,6 @@ export default function Home({ onNavigate }) {
         </svg>
       )
     }
-  ];
-
-  const stats = [
-    { value: "10,000+", label: "Active Members" },
-    { value: "50+", label: "Expert Coaches" },
-    { value: "24/7", label: "Gym Access" },
-    { value: "150+", label: "Weekly Classes" }
   ];
 
   return (
@@ -66,7 +59,7 @@ export default function Home({ onNavigate }) {
           YOUR <span className="gradient-text">LIMITS</span>
         </h1>
         <p style={{ maxWidth: '700px', margin: '0 auto 40px', fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
-          At FitRise, we provide elite training programs, state-of-the-art facilities, and a supportive community to help you achieve your ultimate fitness potential.
+          At FitRise, we design personalized workout routines, custom nutrition strategies, and provide expert coaching to help you achieve your ultimate training potential.
         </p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <button className="btn btn-primary" onClick={() => onNavigate('products')}>
@@ -82,27 +75,11 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      {/* Stats Counter Section */}
-      <section className="section stats-section" style={{ borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)', background: 'var(--bg-secondary)', padding: '40px 24px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
-          {stats.map((stat, index) => (
-            <div key={index} style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2.5rem', fontWeight: '800', fontFamily: 'var(--font-heading)', color: 'var(--accent-neon)', marginBottom: '8px' }}>
-                {stat.value}
-              </div>
-              <div style={{ textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.1em', color: 'var(--text-secondary)' }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Core Pillars Section */}
       <section className="section pillars-section">
         <div className="section-header">
-          <h2>OUR CORE <span className="gradient-text">PROGRAMS</span></h2>
-          <p>We build our routines around proven pillars of fitness to deliver comprehensive results for body and mind.</p>
+          <h2>OUR CORE <span className="gradient-text">METHODOLOGY</span></h2>
+          <p>We design every program around proven pillars of fitness, custom workout structures, and tailored nutrition.</p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
@@ -121,12 +98,12 @@ export default function Home({ onNavigate }) {
       {/* Dynamic CTA */}
       <section className="section cta-section" style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px', background: 'linear-gradient(135deg, var(--bg-card), var(--bg-secondary))', border: '1px solid var(--border-light)', padding: '80px 40px', textAlign: 'center', marginTop: '40px' }}>
         {/* Subtle decorative circles */}
-        <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(57, 255, 20, 0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
-        <div style={{ position: 'absolute', bottom: '-10%', left: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 94, 0, 0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 143, 61, 0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', bottom: '-10%', left: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
 
-        <h2 style={{ marginBottom: '16px' }}>ARE YOU READY TO <span className="highlight-green">RISE</span>?</h2>
+        <h2 style={{ marginBottom: '16px' }}>ARE YOU READY TO <span className="highlight-primary">RISE</span>?</h2>
         <p style={{ maxWidth: '600px', margin: '0 auto 32px', color: 'var(--text-secondary)' }}>
-          Start your transformation journey today. Join an elite community where performance meets support, and reach heights you never thought possible.
+          Start your transformation journey today. Get your custom training and nutrition plan, join our community, and reach heights you never thought possible.
         </p>
         <button className="btn btn-accent" onClick={() => onNavigate('contact')}>
           Join FitRise Today

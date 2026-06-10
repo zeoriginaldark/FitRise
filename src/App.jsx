@@ -45,12 +45,12 @@ function App() {
         <div className="navbar-container">
           <div className="logo" onClick={() => handleNavigate('home')}>
             <span className="logo-icon">⚡</span>
-            <span>FIT<span className="highlight-green">RISE</span></span>
+            <span>FIT<span className="highlight-primary">RISE</span></span>
           </div>
 
           {/* Toggle button for mobile navigation */}
-          <button 
-            className="menu-toggle" 
+          <button
+            className="menu-toggle"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -71,7 +71,7 @@ function App() {
           {/* Navigation Links */}
           <ul className={`nav-links ${isMobileOpen ? 'open' : ''}`}>
             <li>
-              <span 
+              <span
                 className={`nav-link ${activePage === 'home' ? 'active' : ''}`}
                 onClick={() => handleNavigate('home')}
               >
@@ -79,7 +79,7 @@ function App() {
               </span>
             </li>
             <li>
-              <span 
+              <span
                 className={`nav-link ${activePage === 'products' ? 'active' : ''}`}
                 onClick={() => handleNavigate('products')}
               >
@@ -87,7 +87,7 @@ function App() {
               </span>
             </li>
             <li>
-              <span 
+              <span
                 className={`nav-link ${activePage === 'about' ? 'active' : ''}`}
                 onClick={() => handleNavigate('about')}
               >
@@ -95,19 +95,19 @@ function App() {
               </span>
             </li>
             <li>
-              <span 
+              <span
                 className={`nav-link ${activePage === 'contact' ? 'active' : ''}`}
                 onClick={() => handleNavigate('contact')}
               >
                 Contact
               </span>
             </li>
-            
+
             {/* Mobile-only CTA */}
             {isMobileOpen && (
               <li style={{ marginTop: '16px', width: '100%' }}>
-                <button 
-                  className="btn btn-primary" 
+                <button
+                  className="btn btn-primary"
                   style={{ width: '100%' }}
                   onClick={() => handleNavigate('contact')}
                 >
@@ -138,10 +138,10 @@ function App() {
         <div className="footer-container">
           <div className="footer-brand">
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ color: 'var(--accent-neon)' }}>⚡</span> FITRISE
+              <span style={{ color: 'var(--accent-primary)' }}>⚡</span> FITRISE
             </h3>
             <p>
-              We provide elite training programs, high-end equipment, and custom nutrition plans to push you beyond your limits.
+              We design customized workout routines, personalized meal plans, and provide elite coaching to push you beyond your limits.
             </p>
             <div className="footer-socials">
               <a href="#" className="social-icon" aria-label="Facebook">
@@ -174,7 +174,7 @@ function App() {
             <h4>Quick Links</h4>
             <ul>
               <li><a onClick={() => handleNavigate('home')}>Home</a></li>
-              <li><a onClick={() => handleNavigate('products')}>Membership Plans</a></li>
+              <li><a onClick={() => handleNavigate('products')}>Training & Nutrition Plans</a></li>
               <li><a onClick={() => handleNavigate('about')}>About Us</a></li>
               <li><a onClick={() => handleNavigate('contact')}>Contact Us</a></li>
             </ul>
@@ -193,18 +193,18 @@ function App() {
           <div className="footer-column">
             <h4>Contact Info</h4>
             <ul style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '12px' }}>742 Evergreen Terrace, Sector 4, Fitness Hub</li>
-              <li style={{ marginBottom: '12px' }}>+1 (555) 123-4567</li>
+              <li style={{ marginBottom: '12px' }}>Durbar Marg, Kathmandu 44600, Nepal</li>
+              <li style={{ marginBottom: '12px' }}>+977 1-4XXXXXX</li>
               <li>info@fitrise.com</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} FitRise Gym. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FitRise Training. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '20px' }}>
-            <a href="#" style={{ transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.target.style.color='var(--accent-neon)'} onMouseOut={(e) => e.target.style.color='var(--text-muted)'}>Privacy Policy</a>
-            <a href="#" style={{ transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.target.style.color='var(--accent-neon)'} onMouseOut={(e) => e.target.style.color='var(--text-muted)'}>Terms of Service</a>
+            <a href="#" style={{ transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'}>Privacy Policy</a>
+            <a href="#" style={{ transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'}>Terms of Service</a>
           </div>
         </div>
       </footer>
